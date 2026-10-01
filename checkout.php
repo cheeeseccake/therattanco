@@ -74,8 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checkout - The Rattan Co.</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="checkout.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
 <section class="checkout-section">
@@ -122,8 +123,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 </section>
 
-<script>
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    <script src="js/main.js"></script>
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const checkoutItems = document.getElementById('checkout-items');
 const cartData = document.getElementById('cart-data');
 

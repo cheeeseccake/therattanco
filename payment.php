@@ -14,8 +14,9 @@ $total = $_GET['total'] ?? 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment - The Rattan Co.</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
 </head>
 <body>
     <section class="checkout-section">
@@ -24,6 +25,7 @@ $total = $_GET['total'] ?? 0;
         <p>Order confirmed.</p>
         <a href="index.php">Back to Home</a>
     </section>
+    <script src="js/main.js"></script>
     <script>
         setTimeout(() => window.location.href='index.php', 10000);
     </script>

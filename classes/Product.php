@@ -24,6 +24,12 @@ class Product {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function searchProducts($query) {
+        $stmt = $this->db->prepare("SELECT * FROM inventory WHERE item LIKE ? OR description LIKE ? ORDER BY item_id");
+        $stmt->execute(["%$query%", "%$query%"]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getProductById($id) {
         $stmt = $this->db->prepare("SELECT * FROM inventory WHERE item_id = ?");
         $stmt->execute([$id]);
